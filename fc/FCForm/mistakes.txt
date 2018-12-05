@@ -1,0 +1,25 @@
+NG soletrar                       5/04/2011 11:12:31 a.m.
+NG comer                          5/04/2011 11:25:16 a.m.
+NG querer                         7/04/2011 2:02:23 p.m.
+OK descansar                      7/04/2011 5:46:16 p.m.
+OK descansar                      7/04/2011 6:00:14 p.m.
+NG beber                          7/04/2011 6:10:23 p.m.
+NG cometer                        8/04/2011 2:51:23 p.m.
+NG dar                            13/05/2011 1:29:21 p.m.
+NG dar                            16/05/2011 4:23:09 p.m.
+NG pôr                            9/06/2011 12:29:25 p.m.
+NG crer, eu creio              9/06/2011 12:36:50 p.m.
+NG ouvir, eu ouço              9/06/2011 12:52:44 p.m.
+NG crer, vocês crêem           9/06/2011 12:53:04 p.m.
+NG vir, eu venho               9/06/2011 12:58:57 p.m.
+NG rir, a gente ri             9/06/2011 1:16:31 p.m.
+NG pedir, elas pedem           16/06/2011 2:29:35 p.m.
+NG vir, eles vêm               16/06/2011 3:42:20 p.m.
+NG vir, nós viemos             17/06/2011 2:11:34 p.m.
+NG vir, elas vieram            17/06/2011 2:11:54 p.m.
+NG vir, nós viemos             17/06/2011 4:51:20 p.m.
+NG fazer, nós fizemos          17/06/2011 4:51:31 p.m.
+NG pôr, nós pusemos            17/06/2011 4:52:09 p.m.
+NG fazer, eles fizeram         21/06/2011 7:56:47 a.m.
+NG estar, vocês estavam        21/06/2011 8:04:41 a.m.
+NG tirar, nós tirávamos        21/06/2011 8:24:02 a.m.

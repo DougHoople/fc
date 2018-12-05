@@ -1,0 +1,57 @@
+﻿tsuitachi,first day of month
+futsuka,second day of month
+mikka,three days
+mikka,third day of month
+yokka,fourth day of month
+itsuka,5th day of month
+muika,6th day of month
+nanoka,7th day of month
+yooka,8th day of month
+kokonoka,9th day of month
+juuyokka,14th day of month
+nijuuyokka,24th day of month
+juushichinichi,17th day of month
+juuhachinichi,18th day of month
+nijuuhachinichi,28th day of month
+nijuushichinichi,27th day of month
+nichiyobi,Sunday
+getsuyobi,Monday
+kayoobi,Tuesday
+suiyoobi,Wednesday
+mokuyoobi,Thursday
+kinyoobi,Friday
+doyoobi,Saturday
+ichigatsu,January
+nigatsu,February
+sangatsu,March
+shigatsu,April
+gogatsu,May
+rokugatsu,June
+shichigatsu,July
+hachigatsu,August
+kuugatsu,September
+juugatsu,October
+juuichigatsu,November
+juunigatsu,December
+kongetsu,this month
+raigetsu,next month
+sengetsu,last month
+conshuu,this week
+raishuu,next week
+senshuu,last week
+kyoo,today
+ashita,tomorrow
+asatte,day after tomorrow
+shiasatte,day after day after tomorrow
+kinoo,yesterday
+ototoi,day before yesterday
+kimasu,come
+hanashimasu,speak
+ikimasu,go
+shimasu,do (play)
+kaimasu,buy
+tabemasu,eat
+nomimasu,drink
+haraimasu,pay
+wear,kaburimasu kimasu hakimasu
+chigaimasu,be wrong (be different)

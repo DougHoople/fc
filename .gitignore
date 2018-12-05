@@ -1,0 +1,9 @@
+out
+**/*.suo
+**/*.DS_Store
+**/bin
+**/obj
+**/.*/
+**/*.log
+**/*.csproj.user
+**/wwwroot
