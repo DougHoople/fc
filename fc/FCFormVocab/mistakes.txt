@@ -42,3 +42,7 @@ NG palácio                        29/03/2011 1:24:46 p.m.
 NG tapete                         29/03/2011 1:25:12 p.m.
 NG telegrama                      7/04/2011 7:18:43 p.m.
 NG economia                       7/04/2011 7:21:03 p.m.
+NG a estátua                      10/08/2021 1:55:25 pm
+OK a estátua                      10/08/2021 1:55:36 pm
+OK a estátua                      10/08/2021 1:55:38 pm
+NG a estátua                      10/08/2021 1:55:45 pm

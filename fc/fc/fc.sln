@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fc", "fc\fc.csproj", "{BA235DDE-2617-4B5A-946E-E12BA2BC04ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCForm", "FCForm\FCForm.csproj", "{330A4599-9FB8-4BCC-9905-6551CF367416}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vocab", "vocab\vocab.csproj", "{BFC17FAA-75AD-400A-A444-2D17BFE71AD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCFormVocab", "FCFormVocab\FCFormVocab.csproj", "{DDE17D49-8CB0-4882-A35A-61BC8574DE9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA235DDE-2617-4B5A-946E-E12BA2BC04ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA235DDE-2617-4B5A-946E-E12BA2BC04ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA235DDE-2617-4B5A-946E-E12BA2BC04ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA235DDE-2617-4B5A-946E-E12BA2BC04ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{330A4599-9FB8-4BCC-9905-6551CF367416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{330A4599-9FB8-4BCC-9905-6551CF367416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{330A4599-9FB8-4BCC-9905-6551CF367416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{330A4599-9FB8-4BCC-9905-6551CF367416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC17FAA-75AD-400A-A444-2D17BFE71AD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC17FAA-75AD-400A-A444-2D17BFE71AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC17FAA-75AD-400A-A444-2D17BFE71AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC17FAA-75AD-400A-A444-2D17BFE71AD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDE17D49-8CB0-4882-A35A-61BC8574DE9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE17D49-8CB0-4882-A35A-61BC8574DE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE17D49-8CB0-4882-A35A-61BC8574DE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDE17D49-8CB0-4882-A35A-61BC8574DE9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -101,6 +101,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="mistakes.txt" />
+    <Content Include="vocab - Copy.txt" />
+    <Content Include="vocabPortuguese.txt" />
     <Content Include="vocab.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

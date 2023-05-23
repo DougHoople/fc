@@ -62,8 +62,9 @@ namespace FCFormVocab
                             vocabEntry = vocab.getRandomVocabEntry();
                             vocabEntryList.Add(vocabEntry);
                         }
-                        label1.Text = vocabEntry.portuguese; 
-                        label2.Text = "";
+                        // label1.Text = vocabEntry.portuguese + (vocabEntry.xpected ? "" : $" (ex)"); 
+                        label1.Text = vocabEntry.portuguese ;
+                        label2.Text = $" {vocabEntry.predictedPlural}";
                         label3.Text = "";
 
                         //if (verbiage.IsIrregular)
@@ -76,7 +77,7 @@ namespace FCFormVocab
                     break;
                 case PromptState.prompting:
                     {
-                        label1.Text = vocabEntry.genderToString() + " " + vocabEntry.portuguese; 
+                        label1.Text = vocabEntry.GenderToString() + " " + vocabEntry.portuguese; 
                         label3.Text = "";
                         label2.Text = "";
                         promptState = PromptState.answering;

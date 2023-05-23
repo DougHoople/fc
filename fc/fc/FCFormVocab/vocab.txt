@@ -1,0 +1,439 @@
+﻿o/a estudante,student
+a/o artista,artist
+o/a pianista,pianist
+o/a turista,tourist
+o/a jornalista,journalist
+o carro,automobile
+o telefone,telephone
+o livro,book
+a janela,window
+a caneta,pen
+o lápis,pencil
+a coisa,thing
+a vez,time (v)
+o tempo,time (t)
+a carta,letter
+o abajur,table lamp/lampshade
+o sofá,sofa
+a cadeira,chair
+o tapete,carpet
+a cortina,curtain
+a herança,inheritance
+o quadro,painting
+o escritório,office
+a mesa,table
+o relógio,clock
+a cozinha,kitchen
+o quarto,bedroom
+a sala de jantar,dining room
+o porão,basement
+o carro,car
+a motocicleta,motorcycle
+a bicicleta,bicycle
+o gato,cat
+o jardim,garden
+o cachorro,dog
+a caixa do correio,mailbox
+a correspondência,correspondence
+a rosa,rose
+o fogão,fire
+o vinho,wine
+a manteiga,butter
+o sal,salt
+a pimenta,pepper
+o copo de vinho,glass of wine
+o jornal,newspaper
+a xícara,teacup
+o garfo,fork
+a faca,knife
+a tigela,bowl
+o guardanapo,napkin
+o prato,plate
+a colher,spoon
+o armário,closet
+o chá,tea
+o café,coffee
+o pão,bread
+a agricultura,agriculture
+a álgebra,algebra
+a América,America
+o animal,animal
+o acidente,accident
+o hotel,hotel
+o ônibus,bus
+o táxi,taxi
+o banheiro,bathroom
+o restaurante,restaurant
+o banco,bank
+a palavra,word
+a salada,salad
+o trem,train
+a cama,bed
+o travesseiro,pillow
+o cobertor,blanket
+o despertador,alarm clock
+o espelho,mirror
+a pia,wash basin
+a toalha,towel
+o vaso sanitário,toilet bowl
+a televisão,television
+o computador,computer
+o papel,paper
+o cesto de papel,basket
+a carta,letter
+o selo,stamp
+o cartão postal,postcard
+o passaporte,passport
+a mala,suitcase
+a passagem,ticket
+a bolsa,bag
+a carteira,wallet/idcard
+o dinheiro,money
+o cartão de crédito,credit card
+a máquina fotográfica,camera
+o filme,film
+a sunga,swimming trunks
+o maiô,swimsuit
+as sandálias,sandals
+a escova de dentes,toothbrush
+a pasta de dentes,toothpaste
+o sabonete,toilet soap
+o aparelho de barbear,razor
+o desodorante,deodorant
+o pente,comb@5
+o casaco,jacket/coat
+o guarda-chuva,umbrella
+a capa de chuva,poncho
+a viseira,visor
+o chapéu de praia,beach hat
+a bota,boot
+as luvas,gloves
+o sapato,shoe
+o terno,suit
+a gravata,tie
+a camisa,shirt
+o lenço,handkerchief
+o lenço de papel,tissue
+a jaqueta,jacket
+a calça,pants
+o jeans,jeans
+o short,pair of shorts
+a camiseta,tshirt
+a cueca,underpants
+o vestido,dress
+a blusa,blouse/shirt
+o uso,use
+a saia,skirt
+o chuveiro,shower
+o suéter,sweater
+a combinaçao,slip
+o sutiã,bra
+a calçinha,panties
+a meia-calça,pantyhose
+o pijama,pajamas
+a camisola,nightdress
+o roupão de banho,bathrobe
+as flores,flowers
+as meias,stockings
+os chinelos,slippers
+os óculos,glasses
+os cheques de viagem,travelers checks
+os óculos de sol,sunglasses
+a aplicação,application
+a atenção,attention
+o ato,act (play)
+o balão,balloon
+o banco,bank
+o bife,beef
+a garagem,garage
+a calma,calm
+a capacidade,capacity
+a capela,chapel
+a capital,capital
+o caramelo,caramel
+o centro,center
+o cheque,check (bank)
+o chocolate,chocolate
+o cinema,cinema@3
+o closet,closet
+a companhia,company
+a conversação,conversation
+o creme,cream
+a cultura,culture
+a decisão,decision
+a declaração,declaration
+o desconforto,discomfort
+a diferença,difference
+a direção,direction
+a distância,distance
+a divisão,division
+o documento,document
+o doutor,doctor
+a economia,economy
+o espaço,space
+o esporte,sport
+a manha,morning
+o dia,day
+a tarde,afternoon
+a noite,evening
+a estabilidade,stability
+a estação,station
+o estado,state
+a estátua,statue
+o calendário,calendar
+o erro,error
+o e-mail,e-mail
+a esperiéncia,experience
+o extremo,extreme
+a expressão,expression
+a fama,fame
+a família,family
+o favor,favor
+o festival,festival
+o final,final
+a figura,figure
+o folclore,folklore
+a forma,form
+o médico,doctor (profession)
+o homem,man/human
+o doce,sweet/dessert
+a fortuna,fortune
+a fotografia,photograph
+a freqüência,frequency
+a fruta,fruit
+o futuro,future
+a neve,snow
+a chuva,rain
+o vento,wind
+o inverno,winter
+o verão,summer
+o outono,autumn
+a primavera,spring
+a idéia,idea
+a temperatura,temperature
+o termômetro,thermometer
+a galáxia,galaxy
+a galeria,gallery
+a glória,glory
+o grupo,group
+a avó,grandmother
+a tia,aunt
+o tio,uncle
+o filho,son
+o avô,grandfather
+o pai,father
+a mãe,mother
+a filha,daughter
+a irmã,sister
+o irmão,brother
+a história,history
+a honra,honor
+o humor,humor
+o nome,name
+os parentes,relatives
+a imaginação,imagination
+a importáncia,importance
+os pais,parents
+os filhos,children (f)
+as crianças,children (c)
+a geladeira,refrigerator
+o fogão,stove
+a cerveja,beer
+o leite,milk
+a influência,influence
+a informação,information
+a instruçao,instruction
+o instrumento,instrument
+o copo,glass
+o chá,tea
+o café,coffee
+a inteligência,intelligence
+a inten¢ão,intention
+o interior,interior
+a religião,religion
+a igreja,church
+a jaqueta,jacket
+a lição,lesson
+o licor,liquor
+o limão,lime
+a limonada,lemonade
+a lista,list
+o litro,liter
+o mapa,map
+a máquina,machine
+a marca,mark
+a matemática,mathematics
+o matrimônio,matrimony
+o mecânico,mechanic
+a medicina,medicine
+o mediterrâneo,Mediterranean
+a melodia,melody
+o menu,menu
+o mercado,market
+o metró,subway
+o ministro,minister (govt)
+o minuto,minute
+o momento,moment
+o monastério,monastery
+a montanha,mountain
+o museu,museum
+a música,music
+a reposta,answer
+o dicionário,dictionary
+a nação,nation
+o norte,north
+o número,number
+o objeto,object
+a ocasião,occasion
+o oceano,ocean
+o ocidente,occident/west
+a opéra,opera
+a operação,operation
+a opção,option
+a oportunidade,opportunity
+a oposição,opposition
+a ostra,oyster
+a palácio,palace
+a palma,palm
+o pânico,panic
+a pêra,pear
+a pausa,pause
+o perfume,perfume
+o piano,piano
+o piloto,pilot
+a polícia,police
+a política,politics
+o ponto,point
+a prática,practice
+o preço,price
+o presente,present/gift
+o problema,problem
+o produto,product
+o professor,professor/teacher (m)
+a professora,professor/teacher (f)
+o programa,program
+a promessa,promise
+a pronúncia,pronunciation
+o público,public
+a revista,magazine
+a água,water
+o rádio,radio
+a raça,race
+o raio,ray
+a reação,reaction
+a rebelião,rebellion
+a relaçao,relation
+a república,republic
+a reserva,reservation
+a revolução,revolution
+o ruby,ruby
+a pacote,pacote
+o fax,fax
+o salário,salary
+o salmão,salmon
+o santo,saint
+a sardinha,sardine
+a secretária,secretary (f)
+o secretário,secretary (m)
+a seleção,selection
+a sensação,sensation
+o serviço,service
+o silêncio,silence
+a/o caixa (p),cashier
+a caixa (c),cashdesk
+o garçom,waiter
+a garçonete,waitress
+a conta,bill
+a gorjeta,tip
+o cardápio,menu
+o troco,change
+o estacionamento,parking/parking lot
+o apartamento,apartmento
+a sinfonia,symphony
+o sistema,system@5
+o tabaco,tabacco
+a tarifa,tariff/fare
+o táxi,taxi
+o teatro,theater
+o telegrama,telegram
+o terminal,terminal
+o tomate,tomato
+o total,total
+o tráfego,traffic
+o triângulo,triangle
+a trompeta,trumpet
+o tumulto,tumult
+o túnel,tunnel
+o turismo,tourism
+o tutor,tutor
+a união,union
+o uniforme,uniform
+a universidade,university
+o utensílio,utensil
+a utilidade,utility
+a vacina,vaccine
+a vaga,vacancy
+o vegetariano,vegetarian
+a vista,view
+o vale,valley
+a vaidade,vanity
+o vaso,vase
+o Vaticano,Vatican
+o veículo,vehicle
+o vinagre,vinegar
+o violino,violin
+a visa,visa
+a visita,visit
+o zodíaco,zodiac
+a zona,zone
+a zoologia,zoology
+as meias,stockings
+os óculos,glasses
+os cheques de viagem,travelers checks
+os óculos de sol,sunglasses
+a secretária,desk
+a tradução,translation
+o interprete,interpreter
+a/o cliente,client
+a opinião,opinion
+a reunião,meeting
+a obediência,obedience
+a hospedaria,boardinghouse
+o pensamento,thought
+o indivíduo,individual
+a tinta,paint/ink
+a classe,class
+o limite,limit
+o socorro,help
+o café da manha,breakfast
+o humor,humor
+a gripe,flu
+o resfridao,cold
+o chapéu,hat
+a mente,mind@5
+a indústria,industry
+o ar,air
+a entrada,entrance
+a floresta,forest
+a guitarra,guitar
+o menino,boy
+a menina,girl
+a harmonia,harmony
+a libra,pound (weight)
+o envelope,envelope
+a capacidade,capacity
+o lucro,profit
+o gosto,taste
+o futebol,soccer
+x xampu,shampoo
+a civilização,civilization
+o caminho,way
+o emprego,employment
+o instante,instant
+a dívida,debit
+o negócio,business (n)
+o céu,sky/heaven
+o comércio,business (c)
+o outono,autumn
+o inverno,winter
+a primavera,spring

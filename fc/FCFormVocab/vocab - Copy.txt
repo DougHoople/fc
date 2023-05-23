@@ -1,0 +1,157 @@
+﻿Couch,die
+Butter,die
+Milch,die
+Abitur,das
+Kamera,die
+Kreuz,das
+Geduld,die
+Lampe,die
+Ampel,die
+Schild,das
+Verkehr,der
+Gras,das
+Feier,die
+Fest,das
+Rad,das
+Couch,die
+Millionär,der
+Kommissar,der
+Fluchtling,der
+Lehrling,der
+Hören,das
+Singen,das
+Sprechen,das
+Tanzen,das
+Universität,die
+Eigentum,das
+Irrtum,der
+Duett,das
+Mädchen,das
+Fräulein,das
+Büchlein,das
+Büro,das
+Espresso,der
+//Montag,der
+//Dienstag,der
+//Mittwoch,der
+//Donnerstag,der
+//Freitag,der
+//Samstag,der
+//Sonntag,der
+//Westen,der
+//Norden,der
+//Osten,der
+//Süden,der
+//Januar,der
+//Februar,der
+//März,der
+//April,der
+//Mai,der
+//Juni,der
+//Juli,der
+//August,der
+//September,der
+//Oktober,der
+//November,der
+//Dezember,der
+//Jahr,das
+//Frühling,der
+//Sommer,der
+//Herbst,der
+//Winter,der
+Gold,das
+Eisen,das
+Honig,der
+Gute,das
+Böse,das
+Hitze,die
+Kälte,die
+Musik,die
+Liebe,die
+Mut,der
+Ehrlichkeit,die
+Aufrichtigkeit,die
+Vieh,das
+Polizei,die
+Obst,das
+Fleisch,das
+Industrie,die
+Suppen,die
+Hand,die
+Onkel,der
+Vogel,der
+Arm,der
+Stuhl,der
+Nacht,die
+Bild,das
+Name,der
+Farbe,die
+Restaurant,das
+Gehalt (content),der
+Gehalt (salary),das
+Golf (gulf),der
+Leiter (leader),der
+Leiter (ladder),die
+Mark (currency),die
+Mark (marrow),das
+See (lake),der
+See (sea,ocean),die
+Steuer (steering wheel),das
+Steuer (tax),die
+Tor (fool),der
+Tor (gate),das
+Band (book volume),der
+Band (ribbon, tape),das
+Band (musical group),die
+Tochter,die
+Schwester,die
+Mauer,die
+Leder,das
+Kartoffel,die
+Schlüssel,der
+Boden,der
+Teller,der
+Arbeiter,der
+Eimer,der
+Zucker,der
+Honig,der
+Pfennig,der
+Teppich,der
+Kommandant,der
+Kommissar,der
+Enthusiast,der
+Student,der
+Friseur,der
+Offizier,der
+Optimist,der
+Idealismus,der
+Tenor,der
+Tanne,die
+Linde,die
+Ahorn,der
+Banane,die
+Pflaume,die
+Apfel,der
+Orchidee,die
+Lilie,die
+Iran,der
+Iraq,der
+Tschechische Republik,die
+Han,der
+Katze,die
+Henne,die
+Kalb,das
+Fohlen,das
+Lamm,das
+Ferkel,das
+Tischlein,das
+Bübchen,das
+Küken,das
+Gebäude,das
+Gitarre,das
+Mandoline,die
+Bein,das
+Sage,die
+Fabrik,die
+Garage,die
+//äÄöÖüÜ
