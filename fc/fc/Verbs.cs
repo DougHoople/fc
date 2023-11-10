@@ -58,10 +58,10 @@ namespace fc
     public enum Person
     {
         firstPersonSingular,
-        //secondPersonSingular, // fixup irregular structure before adding in 
+        secondPersonSingular, // fixup irregular structure before adding in 
         thirdPersonSingular,
         firstPersonPlural,
-        //secondPersonPlural,   // fixup irregular structure before adding in 
+        secondPersonPlural,   // fixup irregular structure before adding in 
         thirdPersonPlural
     }
     public enum Conjugation
@@ -132,11 +132,13 @@ namespace fc
             m_random = new Random();
 
             m_pronounList.Add(new PersonalPronoun("eu", Person.firstPersonSingular));
+            m_pronounList.Add(new PersonalPronoun("tu", Person.secondPersonSingular));
             m_pronounList.Add(new PersonalPronoun("você", Person.thirdPersonSingular));
             m_pronounList.Add(new PersonalPronoun("ele", Person.thirdPersonSingular));
             m_pronounList.Add(new PersonalPronoun("ela", Person.thirdPersonSingular));
             m_pronounList.Add(new PersonalPronoun("a gente", Person.thirdPersonSingular));
             m_pronounList.Add(new PersonalPronoun("nós", Person.firstPersonPlural));
+            m_pronounList.Add(new PersonalPronoun("vós", Person.secondPersonPlural));
             m_pronounList.Add(new PersonalPronoun("eles", Person.thirdPersonPlural));
             m_pronounList.Add(new PersonalPronoun("elas", Person.thirdPersonPlural));
             m_pronounList.Add(new PersonalPronoun("vocês", Person.thirdPersonPlural));
@@ -195,8 +197,10 @@ namespace fc
             m_conjugations = new List<IrregularConjugation>();
             m_infinitive = infinitive;
             m_conjugations.Add(new IrregularConjugation(Person.firstPersonSingular, conjugations[(int)Person.firstPersonSingular]));
+            m_conjugations.Add(new IrregularConjugation(Person.secondPersonSingular, conjugations[(int)Person.secondPersonSingular]));
             m_conjugations.Add(new IrregularConjugation(Person.thirdPersonSingular, conjugations[(int)Person.thirdPersonSingular]));
             m_conjugations.Add(new IrregularConjugation(Person.firstPersonPlural, conjugations[(int)Person.firstPersonPlural]));
+            m_conjugations.Add(new IrregularConjugation(Person.secondPersonPlural, conjugations[(int)Person.secondPersonPlural]));
             m_conjugations.Add(new IrregularConjugation(Person.thirdPersonPlural, conjugations[(int)Person.thirdPersonPlural]));
         }
     }
@@ -623,14 +627,20 @@ namespace fc
                 case Person.firstPersonSingular:
                     conjugatedEnding = endings[0];
                     break;
-                case Person.thirdPersonSingular:
+                case Person.secondPersonSingular:
                     conjugatedEnding = endings[1];
                     break;
-                case Person.firstPersonPlural:
+                case Person.thirdPersonSingular:
                     conjugatedEnding = endings[2];
                     break;
-                case Person.thirdPersonPlural:
+                case Person.firstPersonPlural:
                     conjugatedEnding = endings[3];
+                    break;
+                case Person.secondPersonPlural:
+                    conjugatedEnding = endings[4];
+                    break;
+                case Person.thirdPersonPlural:
+                    conjugatedEnding = endings[5];
                     break;
             }
 
@@ -752,174 +762,174 @@ namespace fc
             Tense t;
 
             // Conjugation.Present
-            e[0] = new Endings('a', new string[] { "o", "a", "amos", "am" });
-            e[1] = new Endings('e', new string[] { "o", "e", "emos", "em" });
-            e[2] = new Endings('i', new string[] { "o", "e", "imos", "em" });
+            e[0] = new Endings('a', new string[] { "o", "as", "a", "amos", "ais", "am" });
+            e[1] = new Endings('e', new string[] { "o", "es", "e", "emos", "eis", "em" });
+            e[2] = new Endings('i', new string[] { "o", "es", "e", "imos", "is", "em" });
             t = new Tense(Conjugation.Present, e);
             Tenses.Add(t);
-            t.addIrregularVerb(new IrregularVerb("dar", new string[] { "dou", "dá", "damos", "dão" }));
-            t.addIrregularVerb(new IrregularVerb("dizer", new string[] { "digo", "diz", "dizemos", "dizem" }));
-            t.addIrregularVerb(new IrregularVerb("estar", new string[] { "estou", "está", "estamos", "estão" }));
-            t.addIrregularVerb(new IrregularVerb("fazer", new string[] { "faço", "faz", "fazemos", "fazem" }));
-            t.addIrregularVerb(new IrregularVerb("haver", new string[] { "hei", "há", "havemos", "hão" }));
-            t.addIrregularVerb(new IrregularVerb("ir", new string[] { "vou", "vai", "vamos", "vão" }));
-            t.addIrregularVerb(new IrregularVerb("poder", new string[] { "posso", "pode", "podemos", "podem" }));
-            t.addIrregularVerb(new IrregularVerb("pôr", new string[] { "ponho", "põe", "pomos", "põem" }));
-            t.addIrregularVerb(new IrregularVerb("querer", new string[] { "quero", "quer", "queremos", "querem" }));
-            t.addIrregularVerb(new IrregularVerb("saber", new string[] { "sei", "sabe", "sabemos", "sabem" }));
-            t.addIrregularVerb(new IrregularVerb("ser", new string[] { "sou", "é", "somos", "são" }));
-            t.addIrregularVerb(new IrregularVerb("ter", new string[] { "tenho", "tem", "temos", "têm" }));
-            t.addIrregularVerb(new IrregularVerb("trazer", new string[] { "trago", "traz", "trazemos", "trazem" }));
-            t.addIrregularVerb(new IrregularVerb("ver", new string[] { "vejo", "vê", "vemos", "vêem" }));
-            t.addIrregularVerb(new IrregularVerb("vir", new string[] { "venho", "vem", "vimos", "vêm" }));
+            t.addIrregularVerb(new IrregularVerb("dar", new string[] { "dou", "dás", "dá", "damos", "dais", "dão" }));
+            t.addIrregularVerb(new IrregularVerb("dizer", new string[] { "digo","diz", "dizes", "dizemos", "dizeis", "dizem" }));
+            //t.addIrregularVerb(new IrregularVerb("estar", new string[] { "estou", "está", "estamos", "estão" }));
+            //t.addIrregularVerb(new IrregularVerb("fazer", new string[] { "faço", "faz", "fazemos", "fazem" }));
+            //t.addIrregularVerb(new IrregularVerb("haver", new string[] { "hei", "há", "havemos", "hão" }));
+            t.addIrregularVerb(new IrregularVerb("ir", new string[] { "vou", "vais", "vai", "vamos", "ides", "vão" }));
+            //t.addIrregularVerb(new IrregularVerb("poder", new string[] { "posso", "pode", "podemos", "podem" }));
+            //t.addIrregularVerb(new IrregularVerb("pôr", new string[] { "ponho", "põe", "pomos", "põem" }));
+            //t.addIrregularVerb(new IrregularVerb("querer", new string[] { "quero", "quer", "queremos", "querem" }));
+            //t.addIrregularVerb(new IrregularVerb("saber", new string[] { "sei", "sabe", "sabemos", "sabem" }));
+            t.addIrregularVerb(new IrregularVerb("ser", new string[] { "sou", "és", "é", "somos", "sois", "são" }));
+            t.addIrregularVerb(new IrregularVerb("ter", new string[] { "tenho", "tens", "tem", "temos", "tendes", "têm" }));
+            //t.addIrregularVerb(new IrregularVerb("trazer", new string[] { "trago", "traz", "trazemos", "trazem" }));
+            t.addIrregularVerb(new IrregularVerb("ver", new string[] { "vejo", "vês", "vê", "vemos", "vedes", "vêem" }));
+            t.addIrregularVerb(new IrregularVerb("vir", new string[] { "venho", "vens", "vem", "vimos", "vindes", "vêm" }));
 
-            t.addIrregularVerb(new IrregularVerb("crer", new string[] { "creio", "crê", "cremos", "crêem" }));
-            t.addIrregularVerb(new IrregularVerb("ler", new string[] { "leio", "lê", "lemos", "lêem" }));
-            t.addIrregularVerb(new IrregularVerb("medir", new string[] { "meço", "mede", "medimos", "medem" }));
-            t.addIrregularVerb(new IrregularVerb("ouvir", new string[] { "ouço", "ouve", "ouvimos", "ouvem" }));
-            t.addIrregularVerb(new IrregularVerb("pedir", new string[] { "peço", "pede", "pedimos", "pedem" }));
-            t.addIrregularVerb(new IrregularVerb("despedir", new string[] { "despeço", "despede", "despedimos", "despedem" }));
-            t.addIrregularVerb(new IrregularVerb("perder", new string[] { "perco", "perde", "perdemos", "perdem" }));
-            t.addIrregularVerb(new IrregularVerb("rir", new string[] { "rio", "ri", "rimos", "riem" }));
-            t.addIrregularVerb(new IrregularVerb("valer", new string[] { "valho", "vale", "valemos", "valem" }));
+            //t.addIrregularVerb(new IrregularVerb("crer", new string[] { "creio", "crê", "cremos", "crêem" }));
+            //t.addIrregularVerb(new IrregularVerb("ler", new string[] { "leio", "lê", "lemos", "lêem" }));
+            //t.addIrregularVerb(new IrregularVerb("medir", new string[] { "meço", "mede", "medimos", "medem" }));
+            //t.addIrregularVerb(new IrregularVerb("ouvir", new string[] { "ouço", "ouve", "ouvimos", "ouvem" }));
+            //t.addIrregularVerb(new IrregularVerb("pedir", new string[] { "peço", "pede", "pedimos", "pedem" }));
+            //t.addIrregularVerb(new IrregularVerb("despedir", new string[] { "despeço", "despede", "despedimos", "despedem" }));
+            //t.addIrregularVerb(new IrregularVerb("perder", new string[] { "perco", "perde", "perdemos", "perdem" }));
+            //t.addIrregularVerb(new IrregularVerb("rir", new string[] { "rio", "ri", "rimos", "riem" }));
+            //t.addIrregularVerb(new IrregularVerb("valer", new string[] { "valho", "vale", "valemos", "valem" }));
 
-            t.addIrregularVerb(new IrregularVerb("boiar", new string[] { "bóio", "bóia", "boiamos", "bóiam" }));
-            t.addIrregularVerb(new IrregularVerb("odiar", new string[] { "odeio", "odeia", "odiamos", "odeiam" }));
+            //t.addIrregularVerb(new IrregularVerb("boiar", new string[] { "bóio", "bóia", "boiamos", "bóiam" }));
+            //t.addIrregularVerb(new IrregularVerb("odiar", new string[] { "odeio", "odeia", "odiamos", "odeiam" }));
 
-            t.addIrregularVerb(new IrregularVerb("cear", new string[] { "ceio", "ceia", "ceamos", "ceiam" }));
-            t.addIrregularVerb(new IrregularVerb("chatear", new string[] { "chateio", "chateia", "chateamos", "chateiam" }));
-            t.addIrregularVerb(new IrregularVerb("passear", new string[] { "passeio", "passeia", "passeamos", "passeiam" }));
-            t.addIrregularVerb(new IrregularVerb("recear", new string[] { "receio", "receia", "receamos", "receiam" }));
-            t.addIrregularVerb(new IrregularVerb("rechear", new string[] { "recheio", "recheia", "recheamos", "recheiam" }));
+            //t.addIrregularVerb(new IrregularVerb("cear", new string[] { "ceio", "ceia", "ceamos", "ceiam" }));
+            //t.addIrregularVerb(new IrregularVerb("chatear", new string[] { "chateio", "chateia", "chateamos", "chateiam" }));
+            //t.addIrregularVerb(new IrregularVerb("passear", new string[] { "passeio", "passeia", "passeamos", "passeiam" }));
+            //t.addIrregularVerb(new IrregularVerb("recear", new string[] { "receio", "receia", "receamos", "receiam" }));
+            //t.addIrregularVerb(new IrregularVerb("rechear", new string[] { "recheio", "recheia", "recheamos", "recheiam" }));
 
-            t.addIrregularVerb(new IrregularVerb("erguer", new string[] { "ergo", "ergue", "erguemos", "erguem" }));
+            //t.addIrregularVerb(new IrregularVerb("erguer", new string[] { "ergo", "ergue", "erguemos", "erguem" }));
 
-            t.addIrregularVerb(new IrregularVerb("aderir", new string[] { "adiro", "adere", "aderimos", "aderem" }));
-            t.addIrregularVerb(new IrregularVerb("advertir", new string[] { "advirto", "adverte", "advertimos", "advertem" }));
-            //          competir isn't in this category after all (I think) 
-            t.addIrregularVerb(new IrregularVerb("consentir", new string[] { "consinto", "consente", "consentimos", "consentem" }));
-            //          corrigir is misspelled in Sue Tyson-Ward as corregir 
-            t.addIrregularVerb(new IrregularVerb("despir", new string[] { "dispo", "despe", "despimos", "despem" }));
-            t.addIrregularVerb(new IrregularVerb("divertir", new string[] { "divirto", "diverte", "divertimos", "divertem" }));
-            t.addIrregularVerb(new IrregularVerb("dormir", new string[] { "durmo", "dorme", "dormimos", "dormem" }));
-            t.addIrregularVerb(new IrregularVerb("engolir", new string[] { "engulo", "engole", "engolimos", "engolem" }));
-            t.addIrregularVerb(new IrregularVerb("ferir", new string[] { "firo", "fere", "ferimos", "ferem" }));
-            t.addIrregularVerb(new IrregularVerb("investir", new string[] { "invisto", "investe", "investimos", "investem" }));
-            t.addIrregularVerb(new IrregularVerb("mentir", new string[] { "minto", "mente", "mentimos", "mentem" }));
-            t.addIrregularVerb(new IrregularVerb("preferir", new string[] { "prefiro", "prefere", "preferimos", "preferem" }));
-            t.addIrregularVerb(new IrregularVerb("pressentir", new string[] { "pressinto", "pressente", "pressentimos", "pressentem" }));
-            t.addIrregularVerb(new IrregularVerb("referir", new string[] { "refiro", "refere", "referimos", "referem" }));
-            t.addIrregularVerb(new IrregularVerb("repetir", new string[] { "repito", "repete", "repetimos", "repetem" }));
-            t.addIrregularVerb(new IrregularVerb("sentir", new string[] { "sinto", "sente", "sentimos", "sentem" }));
-            t.addIrregularVerb(new IrregularVerb("servir", new string[] { "sirvo", "serve", "servimos", "servem" }));
-            t.addIrregularVerb(new IrregularVerb("sugerir", new string[] { "sugiro", "sugere", "sugerimos", "sugerem" }));
-            t.addIrregularVerb(new IrregularVerb("transferir", new string[] { "transfiro", "transfere", "transferimos", "transferem" }));
-            t.addIrregularVerb(new IrregularVerb("vestir", new string[] { "visto", "veste", "vestimos", "vestem" }));
+            //t.addIrregularVerb(new IrregularVerb("aderir", new string[] { "adiro", "adere", "aderimos", "aderem" }));
+            //t.addIrregularVerb(new IrregularVerb("advertir", new string[] { "advirto", "adverte", "advertimos", "advertem" }));
+            ////          competir isn't in this category after all (I think) 
+            //t.addIrregularVerb(new IrregularVerb("consentir", new string[] { "consinto", "consente", "consentimos", "consentem" }));
+            ////          corrigir is misspelled in Sue Tyson-Ward as corregir 
+            //t.addIrregularVerb(new IrregularVerb("despir", new string[] { "dispo", "despe", "despimos", "despem" }));
+            //t.addIrregularVerb(new IrregularVerb("divertir", new string[] { "divirto", "diverte", "divertimos", "divertem" }));
+            //t.addIrregularVerb(new IrregularVerb("dormir", new string[] { "durmo", "dorme", "dormimos", "dormem" }));
+            //t.addIrregularVerb(new IrregularVerb("engolir", new string[] { "engulo", "engole", "engolimos", "engolem" }));
+            //t.addIrregularVerb(new IrregularVerb("ferir", new string[] { "firo", "fere", "ferimos", "ferem" }));
+            //t.addIrregularVerb(new IrregularVerb("investir", new string[] { "invisto", "investe", "investimos", "investem" }));
+            //t.addIrregularVerb(new IrregularVerb("mentir", new string[] { "minto", "mente", "mentimos", "mentem" }));
+            //t.addIrregularVerb(new IrregularVerb("preferir", new string[] { "prefiro", "prefere", "preferimos", "preferem" }));
+            //t.addIrregularVerb(new IrregularVerb("pressentir", new string[] { "pressinto", "pressente", "pressentimos", "pressentem" }));
+            //t.addIrregularVerb(new IrregularVerb("referir", new string[] { "refiro", "refere", "referimos", "referem" }));
+            //t.addIrregularVerb(new IrregularVerb("repetir", new string[] { "repito", "repete", "repetimos", "repetem" }));
+            //t.addIrregularVerb(new IrregularVerb("sentir", new string[] { "sinto", "sente", "sentimos", "sentem" }));
+            //t.addIrregularVerb(new IrregularVerb("servir", new string[] { "sirvo", "serve", "servimos", "servem" }));
+            //t.addIrregularVerb(new IrregularVerb("sugerir", new string[] { "sugiro", "sugere", "sugerimos", "sugerem" }));
+            //t.addIrregularVerb(new IrregularVerb("transferir", new string[] { "transfiro", "transfere", "transferimos", "transferem" }));
+            //t.addIrregularVerb(new IrregularVerb("vestir", new string[] { "visto", "veste", "vestimos", "vestem" }));
 
-            t.addIrregularVerb(new IrregularVerb("cobrir", new string[] { "cubro", "cobre", "cobrimos", "cobrem" }));
-            t.addIrregularVerb(new IrregularVerb("descobrir", new string[] { "descubro", "descobre", "descobrimos", "descobrem" }));
+            //t.addIrregularVerb(new IrregularVerb("cobrir", new string[] { "cubro", "cobre", "cobrimos", "cobrem" }));
+            //t.addIrregularVerb(new IrregularVerb("descobrir", new string[] { "descubro", "descobre", "descobrimos", "descobrem" }));
 
-            t.addIrregularVerb(new IrregularVerb("conseguir", new string[] { "consigo", "consegue", "conseguimos", "conseguem" }));
-            t.addIrregularVerb(new IrregularVerb("seguir", new string[] { "sigo", "segue", "seguimos", "seguem" }));
+            //t.addIrregularVerb(new IrregularVerb("conseguir", new string[] { "consigo", "consegue", "conseguimos", "conseguem" }));
+            //t.addIrregularVerb(new IrregularVerb("seguir", new string[] { "sigo", "segue", "seguimos", "seguem" }));
 
-            t.addIrregularVerb(new IrregularVerb("acudir", new string[] { "acudo", "acode", "acudimos", "acodem" }));
-            t.addIrregularVerb(new IrregularVerb("cuspir", new string[] { "cuspo", "cospe", "cuspimos", "cospem" }));
-            t.addIrregularVerb(new IrregularVerb("subir", new string[] { "subo", "sobe", "subimos", "sobem" }));
-            t.addIrregularVerb(new IrregularVerb("sacudir", new string[] { "sacudo", "sacode", "sacudimos", "sacodem" }));
+            //t.addIrregularVerb(new IrregularVerb("acudir", new string[] { "acudo", "acode", "acudimos", "acodem" }));
+            //t.addIrregularVerb(new IrregularVerb("cuspir", new string[] { "cuspo", "cospe", "cuspimos", "cospem" }));
+            //t.addIrregularVerb(new IrregularVerb("subir", new string[] { "subo", "sobe", "subimos", "sobem" }));
+            //t.addIrregularVerb(new IrregularVerb("sacudir", new string[] { "sacudo", "sacode", "sacudimos", "sacodem" }));
 
             // Conjugation.Preterite
-            e[0] = new Endings('a', new string[] { "ei", "ou", "amos", "aram" });
-            e[1] = new Endings('e', new string[] { "i", "eu", "emos", "eram" });
-            e[2] = new Endings('i', new string[] { "i", "iu", "imos", "iram" });
+            e[0] = new Endings('a', new string[] { "ei", "aste", "ou", "amos", "astes", "aram" });
+            e[1] = new Endings('e', new string[] { "i",  "este", "eu", "emos", "estes", "eram" });
+            e[2] = new Endings('i', new string[] { "i",  "iste", "iu", "imos", "istes", "iram" });
             t = new Tense(Conjugation.Preterite, e);
             Tenses.Add(t);
-            t.addIrregularVerb(new IrregularVerb("dar", new string[] { "dei", "deu", "demos", "deram" }));
-            t.addIrregularVerb(new IrregularVerb("dizer", new string[] { "disse", "disse", "dissemos", "disseram" }));
-            t.addIrregularVerb(new IrregularVerb("estar", new string[] { "estive", "esteve", "estivemos", "estiveram" }));
-            t.addIrregularVerb(new IrregularVerb("fazer", new string[] { "fiz", "fez", "fizemos", "fizeram" }));
-            t.addIrregularVerb(new IrregularVerb("haver", new string[] { "houve", "houve", "houvemos", "houveram" }));
-            t.addIrregularVerb(new IrregularVerb("ir", new string[] { "fui", "foi", "fomos", "foram" }));
-            t.addIrregularVerb(new IrregularVerb("poder", new string[] { "pude", "pôde", "pudemos", "puderam" }));
-            t.addIrregularVerb(new IrregularVerb("pôr", new string[] { "pus", "pôs", "pusemos", "puseram" }));
-            t.addIrregularVerb(new IrregularVerb("querer", new string[] { "quis", "quis", "quisemos", "quiseram" }));
-            t.addIrregularVerb(new IrregularVerb("saber", new string[] { "soube", "soube", "soubemos", "souberam" }));
-            t.addIrregularVerb(new IrregularVerb("ser", new string[] { "fui", "foi", "fomos", "foram" }));
-            t.addIrregularVerb(new IrregularVerb("ter", new string[] { "tive", "teve", "tivemos", "tiveram" }));
-            t.addIrregularVerb(new IrregularVerb("trazer", new string[] { "trouxe", "trouxe", "trouxemos", "trouxeram" }));
-            t.addIrregularVerb(new IrregularVerb("ver", new string[] { "vi", "viu", "vimos", "viram" }));
-            t.addIrregularVerb(new IrregularVerb("vir", new string[] { "vim", "veio", "viemos", "vieram" }));
+            t.addIrregularVerb(new IrregularVerb("dar", new string[] { "dei", "deste", "deu", "demos", "destes", "deram" }));
+            t.addIrregularVerb(new IrregularVerb("dizer", new string[] { "disse", "disseste", "disse", "dissemos", "dissestes", "disseram" }));
+            //t.addIrregularVerb(new IrregularVerb("estar", new string[] { "estive", "esteve", "estivemos", "estiveram" }));
+            //t.addIrregularVerb(new IrregularVerb("fazer", new string[] { "fiz", "fez", "fizemos", "fizeram" }));
+            //t.addIrregularVerb(new IrregularVerb("haver", new string[] { "houve", "houve", "houvemos", "houveram" }));
+            t.addIrregularVerb(new IrregularVerb("ir", new string[] { "fui", "foste", "foi", "fomos", "fostes", "foram" }));
+            //t.addIrregularVerb(new IrregularVerb("poder", new string[] { "pude", "pôde", "pudemos", "puderam" }));
+            t.addIrregularVerb(new IrregularVerb("pôr", new string[] { "pus", "puseste", "pôs", "pusemos", "pusestes", "puseram" }));
+            //t.addIrregularVerb(new IrregularVerb("querer", new string[] { "quis", "quis", "quisemos", "quiseram" }));
+            //t.addIrregularVerb(new IrregularVerb("saber", new string[] { "soube", "soube", "soubemos", "souberam" }));
+            t.addIrregularVerb(new IrregularVerb("ser", new string[] { "fui", "foste", "foi", "fomos", "fostes", "foram" }));
+            t.addIrregularVerb(new IrregularVerb("ter", new string[] { "tive", "tiveste", "teve", "tivemos", "tivestes", "tiveram" }));
+            //t.addIrregularVerb(new IrregularVerb("trazer", new string[] { "trouxe", "trouxe", "trouxemos", "trouxeram" }));
+            t.addIrregularVerb(new IrregularVerb("ver", new string[] { "vi", "viste", "viu", "vimos", "vistes", "viram" }));
+            t.addIrregularVerb(new IrregularVerb("vir", new string[] { "vim","vieste", "veio", "viemos", "viestes", "vieram" }));
 
             // Conjugation.Imperfect
-            e[0] = new Endings('a', new string[] { "ava", "ava", "ávamos", "avam" });
-            e[1] = new Endings('e', new string[] { "ia", "ia", "íamos", "iam" });
-            e[2] = new Endings('i', new string[] { "ia", "ia", "íamos", "iam" });
+            e[0] = new Endings('a', new string[] { "ava", "avas", "ava", "ávamos", "áveis", "avam" });
+            e[1] = new Endings('e', new string[] { "ia",  "ias", "ia", "íamos", "íeis", "iam" });
+            e[2] = new Endings('i', new string[] { "ia", "ias", "ia", "íamos", "íeis", "iam" });
             t = new Tense(Conjugation.Imperfect, e);
             Tenses.Add(t);
-            t.addIrregularVerb(new IrregularVerb("pôr", new string[] { "punha", "punha", "púnhamos", "punham" }));
-            t.addIrregularVerb(new IrregularVerb("ser", new string[] { "era", "era", "éramos", "eram" }));
-            t.addIrregularVerb(new IrregularVerb("ter", new string[] { "tinha", "tinha", "tínhamos", "tinham" }));
-            t.addIrregularVerb(new IrregularVerb("vir", new string[] { "vinha", "vinha", "vínhamos", "vinham" }));
+            t.addIrregularVerb(new IrregularVerb("pôr", new string[] { "punha", "punhas", "punha", "púnhamos", "púnheis", "punham" }));
+            t.addIrregularVerb(new IrregularVerb("ser", new string[] { "era", "eras", "era", "éramos", "éreis", "eram" }));
+            t.addIrregularVerb(new IrregularVerb("ter", new string[] { "tinha", "tinhas", "tinha", "tínhamos", "tínheis", "tinham" }));
+            t.addIrregularVerb(new IrregularVerb("vir", new string[] { "vinha", "vinhas", "vinha", "vínhamos", "vínheis", "vinham" }));
 
-            // Conjugation.Future
-            e[0] = new Endings('a', new string[] { "arei", "ará", "aremos", "arão" });
-            e[1] = new Endings('e', new string[] { "erei", "erá", "eremos", "erão" });
-            e[2] = new Endings('i', new string[] { "irei", "irá", "iremos", "irão" });
-            t = new Tense(Conjugation.Future, e);
-            Tenses.Add(t);
-            t.addIrregularVerb(new IrregularVerb("fazer", new string[] { "farei", "fará", "faremos", "farão" }));
-            t.addIrregularVerb(new IrregularVerb("trazer", new string[] { "trarei", "trará", "traremos", "trarão" }));
+            //// Conjugation.Future
+            //e[0] = new Endings('a', new string[] { "arei", "ará", "aremos", "arão" });
+            //e[1] = new Endings('e', new string[] { "erei", "erá", "eremos", "erão" });
+            //e[2] = new Endings('i', new string[] { "irei", "irá", "iremos", "irão" });
+            //t = new Tense(Conjugation.Future, e);
+            //Tenses.Add(t);
+            //t.addIrregularVerb(new IrregularVerb("fazer", new string[] { "farei", "fará", "faremos", "farão" }));
+            //t.addIrregularVerb(new IrregularVerb("trazer", new string[] { "trarei", "trará", "traremos", "trarão" }));
 
-            // Conjugation.Conditional
-            e[0] = new Endings('a', new string[] { "aria", "aria", "aríamos", "ariam" });
-            e[1] = new Endings('e', new string[] { "eria", "eria", "eríamos", "eriam" });
-            e[2] = new Endings('i', new string[] { "iria", "iria", "iríamos", "iriam" });
-            t = new Tense(Conjugation.Conditional, e);
-            Tenses.Add(t);
-            t.addIrregularVerb(new IrregularVerb("dizer", new string[] { "diria", "diria", "diríamos", "diriam" }));
-            t.addIrregularVerb(new IrregularVerb("fazer", new string[] { "faria", "faria", "faríamos", "fariam" }));
-            t.addIrregularVerb(new IrregularVerb("trazer", new string[] { "traria", "traria", "traríamos", "trariam" }));
+            //// Conjugation.Conditional
+            //e[0] = new Endings('a', new string[] { "aria", "aria", "aríamos", "ariam" });
+            //e[1] = new Endings('e', new string[] { "eria", "eria", "eríamos", "eriam" });
+            //e[2] = new Endings('i', new string[] { "iria", "iria", "iríamos", "iriam" });
+            //t = new Tense(Conjugation.Conditional, e);
+            //Tenses.Add(t);
+            //t.addIrregularVerb(new IrregularVerb("dizer", new string[] { "diria", "diria", "diríamos", "diriam" }));
+            //t.addIrregularVerb(new IrregularVerb("fazer", new string[] { "faria", "faria", "faríamos", "fariam" }));
+            //t.addIrregularVerb(new IrregularVerb("trazer", new string[] { "traria", "traria", "traríamos", "trariam" }));
 
-            // Conjugation.SubjunctivePresent
-            e[0] = new Endings('a', new string[] { "e", "e", "emos", "em" });
-            e[1] = new Endings('e', new string[] { "a", "a", "amos", "am" });
-            e[2] = new Endings('i', new string[] { "a", "a", "amos", "am" });
-            t = new Tense(Conjugation.SubjunctivePresent, e);
-            Tenses.Add(t);
-            t.addIrregularVerb(new IrregularVerb("ser", new string[] { "seja", "seja", "sejamos", "sejam" }));
-            t.addIrregularVerb(new IrregularVerb("estar", new string[] { "esteja", "esteja", "estejamos", "estejam" }));
-            t.addIrregularVerb(new IrregularVerb("haver", new string[] { "haja", "haja", "haja", "haja" }));
-            t.addIrregularVerb(new IrregularVerb("saber", new string[] { "saiba", "saiba", "saibamos", "saibam" }));
-            t.addIrregularVerb(new IrregularVerb("querer", new string[] { "queira", "queira", "queiramos", "queiram" }));
-            t.addIrregularVerb(new IrregularVerb("dar", new string[] { "dê", "dê", "dêmos", "dêem" }));
-            t.addIrregularVerb(new IrregularVerb("ir", new string[] { "vá", "vá", "vamos", "vão" }));
+            //// Conjugation.SubjunctivePresent
+            //e[0] = new Endings('a', new string[] { "e", "e", "emos", "em" });
+            //e[1] = new Endings('e', new string[] { "a", "a", "amos", "am" });
+            //e[2] = new Endings('i', new string[] { "a", "a", "amos", "am" });
+            //t = new Tense(Conjugation.SubjunctivePresent, e);
+            //Tenses.Add(t);
+            //t.addIrregularVerb(new IrregularVerb("ser", new string[] { "seja", "seja", "sejamos", "sejam" }));
+            //t.addIrregularVerb(new IrregularVerb("estar", new string[] { "esteja", "esteja", "estejamos", "estejam" }));
+            //t.addIrregularVerb(new IrregularVerb("haver", new string[] { "haja", "haja", "haja", "haja" }));
+            //t.addIrregularVerb(new IrregularVerb("saber", new string[] { "saiba", "saiba", "saibamos", "saibam" }));
+            //t.addIrregularVerb(new IrregularVerb("querer", new string[] { "queira", "queira", "queiramos", "queiram" }));
+            //t.addIrregularVerb(new IrregularVerb("dar", new string[] { "dê", "dê", "dêmos", "dêem" }));
+            //t.addIrregularVerb(new IrregularVerb("ir", new string[] { "vá", "vá", "vamos", "vão" }));
 
-            // Conjugation.SubjunctiveImperfect
-            e[0] = new Endings('a', new string[] { "asse", "asse", "ássemos", "assem" });
-            e[1] = new Endings('e', new string[] { "esse", "esse", "êssemos", "essem" });
-            e[2] = new Endings('i', new string[] { "isse", "isse", "íssemos", "issem" });
-            t = new Tense(Conjugation.SubjunctiveImperfect, e);
-            Tenses.Add(t);
-            t.addIrregularVerb(new IrregularVerb("ser", new string[] { "fosse", "fosse", "fôssemos", "fossem" }));
-            t.addIrregularVerb(new IrregularVerb("estar", new string[] { "estivesse", "estivesse", "estivéssemos", "estivessem" }));
-            t.addIrregularVerb(new IrregularVerb("haver", new string[] { "houvesse", "houvesse", "houvéssemos", "houvessem" }));
-            t.addIrregularVerb(new IrregularVerb("saber", new string[] { "soubesse", "soubesse", "soubéssemos", "soubessem" }));
-            t.addIrregularVerb(new IrregularVerb("querer", new string[] { "quisesse", "quisesse", "quiséssemos", "quisessem" }));
-            t.addIrregularVerb(new IrregularVerb("dar", new string[] { "desse", "desse", "déssemos", "dessem" }));
-            t.addIrregularVerb(new IrregularVerb("ir", new string[] { "fosse", "fosse", "fôssemos", "fossem" }));
+            //// Conjugation.SubjunctiveImperfect
+            //e[0] = new Endings('a', new string[] { "asse", "asse", "ássemos", "assem" });
+            //e[1] = new Endings('e', new string[] { "esse", "esse", "êssemos", "essem" });
+            //e[2] = new Endings('i', new string[] { "isse", "isse", "íssemos", "issem" });
+            //t = new Tense(Conjugation.SubjunctiveImperfect, e);
+            //Tenses.Add(t);
+            //t.addIrregularVerb(new IrregularVerb("ser", new string[] { "fosse", "fosse", "fôssemos", "fossem" }));
+            //t.addIrregularVerb(new IrregularVerb("estar", new string[] { "estivesse", "estivesse", "estivéssemos", "estivessem" }));
+            //t.addIrregularVerb(new IrregularVerb("haver", new string[] { "houvesse", "houvesse", "houvéssemos", "houvessem" }));
+            //t.addIrregularVerb(new IrregularVerb("saber", new string[] { "soubesse", "soubesse", "soubéssemos", "soubessem" }));
+            //t.addIrregularVerb(new IrregularVerb("querer", new string[] { "quisesse", "quisesse", "quiséssemos", "quisessem" }));
+            //t.addIrregularVerb(new IrregularVerb("dar", new string[] { "desse", "desse", "déssemos", "dessem" }));
+            //t.addIrregularVerb(new IrregularVerb("ir", new string[] { "fosse", "fosse", "fôssemos", "fossem" }));
 
-            // Conjugation.SubjunctiveFuture
-            e[0] = new Endings('a', new string[] { "ar", "ar", "armos", "arem" });
-            e[1] = new Endings('e', new string[] { "er", "er", "ermos", "erem" });
-            e[2] = new Endings('i', new string[] { "ir", "ir", "irmos", "irem" });
-            t = new Tense(Conjugation.SubjunctiveFuture, e);
-            Tenses.Add(t);
-            t.addIrregularVerb(new IrregularVerb("ser", new string[] { "for", "for", "formos", "forem" }));
-            t.addIrregularVerb(new IrregularVerb("estar", new string[] { "estiver", "estiver", "estivermos", "estiverem" }));
-            t.addIrregularVerb(new IrregularVerb("haver", new string[] { "houver", "houver", "houvermos", "houverem" }));
-            t.addIrregularVerb(new IrregularVerb("saber", new string[] { "souber", "souber", "soubermos", "souberem" }));
-            t.addIrregularVerb(new IrregularVerb("querer", new string[] { "quiser", "quiser", "quisermos", "quiserem" }));
-            t.addIrregularVerb(new IrregularVerb("dar", new string[] { "dar", "dar", "darmos", "darem" }));
-            t.addIrregularVerb(new IrregularVerb("ir", new string[] { "for", "for", "formos", "forem" }));
+            //// Conjugation.SubjunctiveFuture
+            //e[0] = new Endings('a', new string[] { "ar", "ar", "armos", "arem" });
+            //e[1] = new Endings('e', new string[] { "er", "er", "ermos", "erem" });
+            //e[2] = new Endings('i', new string[] { "ir", "ir", "irmos", "irem" });
+            //t = new Tense(Conjugation.SubjunctiveFuture, e);
+            //Tenses.Add(t);
+            //t.addIrregularVerb(new IrregularVerb("ser", new string[] { "for", "for", "formos", "forem" }));
+            //t.addIrregularVerb(new IrregularVerb("estar", new string[] { "estiver", "estiver", "estivermos", "estiverem" }));
+            //t.addIrregularVerb(new IrregularVerb("haver", new string[] { "houver", "houver", "houvermos", "houverem" }));
+            //t.addIrregularVerb(new IrregularVerb("saber", new string[] { "souber", "souber", "soubermos", "souberem" }));
+            //t.addIrregularVerb(new IrregularVerb("querer", new string[] { "quiser", "quiser", "quisermos", "quiserem" }));
+            //t.addIrregularVerb(new IrregularVerb("dar", new string[] { "dar", "dar", "darmos", "darem" }));
+            //t.addIrregularVerb(new IrregularVerb("ir", new string[] { "for", "for", "formos", "forem" }));
             infinitives = readSeedData();
         }
 
@@ -931,7 +941,7 @@ namespace fc
             string infinitive;
             // check Form1 constructor for initialization of this variable when 
             // WinForm version is run
-            Conjugation conjugation = Conjugation.Present; ;
+            Conjugation conjugation = Conjugation.Preterite;
 
             while (0 == 0) // hehehe... "while 1 do" ! 
             {
