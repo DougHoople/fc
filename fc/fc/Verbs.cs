@@ -136,7 +136,7 @@ namespace fc
             m_pronounList.Add(new PersonalPronoun("você", Person.thirdPersonSingular));
             m_pronounList.Add(new PersonalPronoun("ele", Person.thirdPersonSingular));
             m_pronounList.Add(new PersonalPronoun("ela", Person.thirdPersonSingular));
-            m_pronounList.Add(new PersonalPronoun("a gente", Person.thirdPersonSingular));
+            // m_pronounList.Add(new PersonalPronoun("a gente", Person.thirdPersonSingular));
             m_pronounList.Add(new PersonalPronoun("nós", Person.firstPersonPlural));
             m_pronounList.Add(new PersonalPronoun("vós", Person.secondPersonPlural));
             m_pronounList.Add(new PersonalPronoun("eles", Person.thirdPersonPlural));
@@ -687,9 +687,25 @@ namespace fc
         static string conjugateVerb(string infinitive, PersonalPronoun pronoun, Conjugation conjugation)
         {
             string conjugatedVerb = null;
+            string comparisonRegular = null;
 
             if (isIrregular(infinitive, conjugation))
+            {
                 conjugatedVerb = conjugateIrregularVerb(infinitive, pronoun, conjugation);
+                if (infinitive.CompareTo("pôr") == 0)
+                {
+                    comparisonRegular = "can't even look it up";
+                }
+                else
+                {
+                    comparisonRegular = conjugateRegularVerb(infinitive, pronoun, conjugation);
+                }
+
+                if ( comparisonRegular.CompareTo(conjugatedVerb) != 0 )
+                {
+                    conjugatedVerb = "*" + conjugatedVerb + "*";
+                }
+            }
             else
                 conjugatedVerb = conjugateRegularVerb(infinitive, pronoun, conjugation);
 
@@ -878,6 +894,7 @@ namespace fc
             Tenses.Add(t);
             t.addIrregularVerb(new IrregularVerb("fazer", new string[] { "farei", "farás", "fará", "faremos", "fareis", "farão" }));
             t.addIrregularVerb(new IrregularVerb("trazer", new string[] { "trarei", "trarás", "trará", "traremos", "trareis", "trarão" }));
+            t.addIrregularVerb(new IrregularVerb("pôr", new string[] { "porei", "porás", "porá", "poremos", "poreis", "porão" }));
 
             // Conjugation.Conditional
             e[0] = new Endings('a', new string[] { "aria", "arias", "aria", "aríamos", "aríeis", "ariam" });
@@ -888,6 +905,7 @@ namespace fc
             t.addIrregularVerb(new IrregularVerb("dizer", new string[] { "diria", "dirias", "diria", "diríamos", "diríeis", "diriam" }));
             t.addIrregularVerb(new IrregularVerb("fazer", new string[] { "faria", "farias", "faria", "faríamos", "faríeis", "fariam" }));
             t.addIrregularVerb(new IrregularVerb("trazer", new string[] { "traria", "trarias", "traria", "traríamos", "traríeis", "trariam" }));
+            t.addIrregularVerb(new IrregularVerb("pôr", new string[] { "poria", "porias", "poria", "poríamos", "poríeis", "poriam" }));
 
             // Conjugation.SubjunctivePresent
             e[0] = new Endings('a', new string[] { "e", "es", "e", "emos", "eis", "em" });
@@ -902,6 +920,7 @@ namespace fc
             t.addIrregularVerb(new IrregularVerb("querer", new string[] { "queira", "queiras", "queira", "queiramos", "queirais", "queiram" }));
             t.addIrregularVerb(new IrregularVerb("dar", new string[] { "dê", "dê", "dê", "dêmos", "deis", "dêem" }));
             t.addIrregularVerb(new IrregularVerb("ir", new string[] { "vá", "vás", "vá", "vamos", "vades", "vão" }));
+            t.addIrregularVerb(new IrregularVerb("pôr", new string[] { "punha", "punhas", "punha", "púnhamos", "púnheis", "punham" }));
 
             // Conjugation.SubjunctiveImperfect
             e[0] = new Endings('a', new string[] { "asse", "asses", "asse", "ássemos", "ásseis", "assem" });
@@ -916,6 +935,7 @@ namespace fc
             t.addIrregularVerb(new IrregularVerb("querer", new string[] { "quisesse", "quisesses", "quisesse", "quiséssemos", "quisésseis", "quisessem" }));
             t.addIrregularVerb(new IrregularVerb("dar", new string[] { "desse", "desses", "desse", "déssemos", "désseis", "dessem" }));
             t.addIrregularVerb(new IrregularVerb("ir", new string[] { "fosse", "fosses", "fosse", "fôssemos", "fôsseis", "fossem" }));
+            t.addIrregularVerb(new IrregularVerb("pôr", new string[] { "pusesse", "pusesses", "pusesse", "puséssemos", "pusésseis", "pusessem" }));
 
             // Conjugation.SubjunctiveFuture
             e[0] = new Endings('a', new string[] { "ar", "ares", "ar", "armos", "ardes", "arem" });
@@ -930,6 +950,7 @@ namespace fc
             t.addIrregularVerb(new IrregularVerb("querer", new string[] { "quiser", "quiseres", "quiser", "quisermos", "quiserdes", "quiserem" }));
             t.addIrregularVerb(new IrregularVerb("dar", new string[] { "der", "deres", "der", "dermos", "derdes", "derem" }));
             t.addIrregularVerb(new IrregularVerb("ir", new string[] { "for", "fores", "for", "formos", "fordes", "forem" }));
+            t.addIrregularVerb(new IrregularVerb("pôr", new string[] { "puser", "puseres", "puser", "pusermos", "puserdes", "puserem" }));
             infinitives = readSeedData();
         }
 
@@ -958,26 +979,34 @@ namespace fc
                 Console.WriteLine(verbiage.Pronoun + " " + verbiage.ConjugatedVerb);
                 Console.WriteLine();
 
-                bool showTables = false;
+                bool showTables = true;
                 if (showTables)
                 {
                     infinitive = verbiage.Infinitive;
                     conjugation = verbiage.Conjugation;
 
-                    PersonalPronoun pp;
-                    pp = personalPronouns.getRandomPersonalPronoun(Person.firstPersonSingular);
-                    Console.WriteLine(("").PadLeft(40) + pp.pronoun.PadRight(8) + conjugateVerb(infinitive, pp, conjugation));
-                    pp = personalPronouns.getRandomPersonalPronoun(Person.thirdPersonSingular);
-                    Console.WriteLine(("").PadLeft(40) + pp.pronoun.PadRight(8) + conjugateVerb(infinitive, pp, conjugation));
-                    pp = personalPronouns.getRandomPersonalPronoun(Person.firstPersonPlural);
-                    Console.WriteLine(("").PadLeft(40) + pp.pronoun.PadRight(8) + conjugateVerb(infinitive, pp, conjugation));
-                    pp = personalPronouns.getRandomPersonalPronoun(Person.thirdPersonPlural);
-                    Console.WriteLine(("").PadLeft(40) + pp.pronoun.PadRight(8) + conjugateVerb(infinitive, pp, conjugation));
+                    const int bigPadLeft = 40;
+                    const int littlePadLeft = 30;
+
+                    var pronounsShortlist = new List<PersonalPronoun>();
+
+                    pronounsShortlist.Add(personalPronouns.getRandomPersonalPronoun(Person.firstPersonSingular));
+                    pronounsShortlist.Add(personalPronouns.getRandomPersonalPronoun(Person.secondPersonSingular));
+                    pronounsShortlist.Add(personalPronouns.getRandomPersonalPronoun(Person.thirdPersonSingular));
+                    pronounsShortlist.Add(personalPronouns.getRandomPersonalPronoun(Person.firstPersonPlural));
+                    pronounsShortlist.Add(personalPronouns.getRandomPersonalPronoun(Person.secondPersonPlural));
+                    pronounsShortlist.Add(personalPronouns.getRandomPersonalPronoun(Person.thirdPersonPlural));
+
+                    foreach ( var pp in pronounsShortlist)
+                    {
+                        Console.WriteLine(("").PadLeft(bigPadLeft) + pp.pronoun.PadRight(littlePadLeft) + conjugateVerb(infinitive, pp, conjugation));
+
+                    }
 
                     Console.WriteLine();
                     foreach (Conjugation item in Enum.GetValues(typeof(Conjugation)))
                     {
-                        Console.WriteLine(("").PadLeft(40) + (item.ToString() + ":").PadRight(15) + verbiage.Pronoun.pronoun + " " + conjugateVerb(infinitive, verbiage.Pronoun, item));
+                        Console.WriteLine(("").PadLeft(bigPadLeft) + (item.ToString() + ":").PadRight(littlePadLeft) + verbiage.Pronoun.pronoun + " " + conjugateVerb(infinitive, verbiage.Pronoun, item));
                     }
                 }
 
